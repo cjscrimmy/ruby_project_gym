@@ -20,4 +20,9 @@ class TestBooking < MiniTest::Test
         result = @booking.member_id()
         assert_equal(36, result)
     end
+
+    def test_lesson_id()
+        result = @booking.lesson_id()
+        assert_equal(61, result)
+    end
 end
