@@ -20,6 +20,6 @@ CREATE TABLE members(
 
 CREATE TABLE bookings(
     id SERIAL PRIMARY KEY,
-    member_id INT REFERENCES members(id),
-    lesson_id INT REFERENCES lessons(id)
+    member_id INT REFERENCES members(id) ON DELETE CASCADE,
+    lesson_id INT REFERENCES lessons(id) ON DELETE CASCADE
 );
