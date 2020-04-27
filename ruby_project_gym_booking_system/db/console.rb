@@ -1,6 +1,6 @@
-require_relative("member")
-require_relative("lesson")
-require_relative("booking")
+require_relative("../models/member")
+require_relative("../models/lesson")
+require_relative("../models/booking")
 
 require("pry")
 
