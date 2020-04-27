@@ -63,4 +63,16 @@ class Lesson
         sql = "DELETE FROM lessons"
         SqlRunner.run(sql)
     end
+
+    def self.all()
+        sql = "SELECT * FROM lessons"
+        lesson_data = SqlRunner.run(sql)
+        return Lesson.map_items(lesson_data)
+    end
+
+    #Helper method for mapping
+    def self.map_items(lesson_data)
+        result = lesson_data.map { |lesson| Lesson.new(lesson) }
+        return result
+    end
 end
