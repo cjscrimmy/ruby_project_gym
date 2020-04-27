@@ -17,4 +17,9 @@ class TestMember < MiniTest::Test
         result = @member.first_name()
         assert_equal("Bill", result)
     end
+
+    def test_last_name()
+        result = @member.last_name()
+        assert_equal("Murray", result)
+    end
 end
