@@ -66,6 +66,14 @@ class Member
         return Member.map_items(member_data)
     end
 
+    def self.find_by_id(id)
+        sql = "SELECT * FROM members
+        WHERE id = $1"
+        values = [id]
+        member = SqlRunner.run(sql, values)
+        result = Member.new(member.first())
+    end
+
     #Helper method for mapping 
     def self.map_items(member_data)
         result = member_data.map {|member| Member.new(member)}
