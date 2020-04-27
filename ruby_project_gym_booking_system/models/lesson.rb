@@ -51,4 +51,11 @@ class Lesson
         @time_lesson_is_on, @week_number_lesson_is_on, @id]
         SqlRunner.run(sql, values)
     end
+
+    def delete()
+        sql = "DELETE FROM lessons
+        WHERE id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
+    end
 end
