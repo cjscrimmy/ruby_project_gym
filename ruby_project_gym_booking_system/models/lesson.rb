@@ -58,4 +58,9 @@ class Lesson
         values = [@id]
         SqlRunner.run(sql, values)
     end
+    
+    def self.delete_all()
+        sql = "DELETE FROM lessons"
+        SqlRunner.run(sql)
+    end
 end
