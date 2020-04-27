@@ -26,4 +26,9 @@ class TestLesson < MiniTest::Test
         result = @lesson.lesson_type()
         assert_equal("Keep Fit", result)
     end
+
+    def test_day_of_lesson()
+        result = @lesson.day_of_lesson()
+        assert_equal("Tuesday", result)
+    end
 end
