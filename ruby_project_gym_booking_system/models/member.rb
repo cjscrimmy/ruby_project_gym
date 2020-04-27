@@ -9,4 +9,8 @@ class Member
         @last_name = options["last_name"]
         @date_of_birth = options["date_of_birth"]
     end
+
+    def pretty_name()
+        return "#{@first_name} #{@last_name}"
+    end
 end

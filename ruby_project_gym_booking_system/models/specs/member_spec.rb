@@ -27,4 +27,9 @@ class TestMember < MiniTest::Test
         result = @member.date_of_birth()
         assert_equal("29/07/80", result)
     end
+
+    def test_pretty_name()
+        result = @member.pretty_name()
+        assert_equal("Bill Murray", result)
+    end
 end
