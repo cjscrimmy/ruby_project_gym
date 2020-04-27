@@ -4,8 +4,9 @@ require_relative("../models/booking")
 
 require("pry")
 
-# Member.delete_all()
-# Lesson.delete_all()
+Booking.delete_all
+Member.delete_all()
+Lesson.delete_all()
 
 member1 = Member.new({
     'first_name' => 'Steve',
