@@ -53,4 +53,16 @@ class Booking
         sql = "DELETE FROM bookings"
         SqlRunner.run(sql)
     end
+
+    def self.all()
+        sql = "SELECT * FROM bookings"
+        booking_data = SqlRunner.run(sql)
+        return Booking.map_items(booking_data)
+    end
+
+    #Helper method for mapping
+    def self.map_items(booking_data)
+        result = booking_data.map { |booking| Booking.new(booking)}
+        return result
+    end
 end

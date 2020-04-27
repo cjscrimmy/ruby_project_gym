@@ -52,5 +52,11 @@ booking2 = Booking.new({
 })
 booking2.save()  
 
+booking3 = Booking.new({
+    "member_id" => member2.id,
+    "lesson_id" => lesson1.id
+})
+booking3.save() 
+
 binding.pry
 nil
