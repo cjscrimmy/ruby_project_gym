@@ -31,4 +31,9 @@ class TestLesson < MiniTest::Test
         result = @lesson.day_of_lesson()
         assert_equal("Tuesday", result)
     end
+
+    def test_time_lesson_is_on()
+        result = @lesson.time_lesson_is_on()
+        assert_equal("10 am", result)
+    end
 end
