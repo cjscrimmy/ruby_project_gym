@@ -70,6 +70,15 @@ class Lesson
         return Lesson.map_items(lesson_data)
     end
 
+    def self.find_by_id(id)
+        sql = "SELECT * FROM lessons
+        WHERE id = $1"
+        values = [id]
+        lesson = SqlRunner.run(sql, values)
+        result = Lesson.new(lesson.first())
+        return result
+    end
+
     #Helper method for mapping
     def self.map_items(lesson_data)
         result = lesson_data.map { |lesson| Lesson.new(lesson) }
