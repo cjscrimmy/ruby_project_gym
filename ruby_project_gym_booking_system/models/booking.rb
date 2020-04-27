@@ -60,6 +60,14 @@ class Booking
         return Booking.map_items(booking_data)
     end
 
+    def self.find_by_id(id)
+        sql = "SELECT * FROM bookings
+        WHERE id = $1"
+        values = [id]
+        booking = SqlRunner.run(sql, values)
+        result = Booking.new(booking.first())
+    end
+
     #Helper method for mapping
     def self.map_items(booking_data)
         result = booking_data.map { |booking| Booking.new(booking)}
