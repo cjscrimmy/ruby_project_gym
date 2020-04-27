@@ -39,5 +39,17 @@ lesson2 = Lesson.new({
 })
 lesson2.save()
 
+booking1 = Booking.new({
+    "member_id" => member1.id,
+    "lesson_id" => lesson1.id
+})
+booking1.save()
+
+booking2 = Booking.new({
+    "member_id" => member2.id,
+    "lesson_id" => lesson2.id
+})
+booking2.save()  
+
 binding.pry
 nil
