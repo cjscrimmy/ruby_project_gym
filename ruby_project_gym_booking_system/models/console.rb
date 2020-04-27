@@ -20,5 +20,23 @@ member2 = Member.new({
 })
 member2.save()
 
+lesson1 = Lesson.new({
+    "lesson_name" => "Step Aerobics",
+    "lesson_type" => "Keep Fit",
+    "day_of_lesson" => "Tuesday",
+    "time_lesson_is_on" => "10 am",
+    "week_number_lesson_is_on" => 13
+})
+lesson1.save()
+
+lesson2 = Lesson.new({
+    "lesson_name" => "Kick Boxing",
+    "lesson_type" => "Martial Arts",
+    "day_of_lesson" => "Wednesday",
+    "time_lesson_is_on" => "8 pm",
+    "week_number_lesson_is_on" => 27
+})
+lesson2.save()
+
 binding.pry
 nil

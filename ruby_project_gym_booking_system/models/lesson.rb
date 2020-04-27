@@ -13,4 +13,23 @@ class Lesson
         @time_lesson_is_on = options['time_lesson_is_on']
         @week_number_lesson_is_on = options['week_number_lesson_is_on']
     end
+    
+    def save()
+        sql = "INSERT INTO lessons
+        (
+            lesson_name,
+            lesson_type,
+            day_of_lesson,
+            time_lesson_is_on,
+            week_number_lesson_is_on
+        )
+        VALUES
+        (
+            $1, $2, $3, $4, $5 
+        )
+        RETURNING *"
+        values = [@lesson_name, @lesson_type, @day_of_lesson, @time_lesson_is_on, @week_number_lesson_is_on]
+        lesson_data = SqlRunner.run(sql, values)
+        @id = lesson_data.first()['id'].to_i
+    end
 end
