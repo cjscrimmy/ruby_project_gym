@@ -21,4 +21,9 @@ class TestLesson < MiniTest::Test
         result = @lesson.lesson_name()
         assert_equal("Step Aerobics", result)
     end
+
+    def test_lesson_type()
+        result = @lesson.lesson_type()
+        assert_equal("Keep Fit", result)
+    end
 end
