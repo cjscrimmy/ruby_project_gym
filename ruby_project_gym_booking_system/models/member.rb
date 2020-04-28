@@ -1,4 +1,6 @@
 require_relative("../db/sql_runner")
+require_relative("./lesson")
+require_relative("./booking")
 
 class Member
     attr_reader :id
