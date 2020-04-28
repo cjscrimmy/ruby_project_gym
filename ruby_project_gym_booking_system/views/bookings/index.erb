@@ -1,0 +1,17 @@
+<h1>Bookings</h1>
+
+<% for booking in @bookings %>
+    <p> 
+        Booking Number: <%=booking.id%>  
+    </p>
+    <p>
+        Member Name: <%=booking.member.pretty_name()%>
+    </p>
+    <p>
+        Lesson Name: <%=booking.lesson.lesson_name%>
+    </p>
+    <p>
+        <a href="/bookings/<%=booking.id%>">View Details</a>
+    </p>
+    <hr />
+<% end %>
