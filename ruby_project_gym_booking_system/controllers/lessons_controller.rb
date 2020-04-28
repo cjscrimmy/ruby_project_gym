@@ -20,6 +20,19 @@ post "/lessons" do #create
 end
 #####
 
+#methods for updating lesson's details
+get "/lessons/:id/edit" do
+    @lesson = Lesson.find_by_id(params['id'].to_i)
+    erb(:"lessons/edit")
+end
+
+post "/lessons/:id" do
+    lesson = Lesson.new(params)
+    lesson.update()
+    redirect to "/lessons/#{params['id']}"
+end
+#####
+
 get "/lessons/:id" do #show
     @lesson = Lesson.find_by_id(params['id'].to_i)
     erb(:"lessons/show")
