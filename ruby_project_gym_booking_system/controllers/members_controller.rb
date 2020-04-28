@@ -37,3 +37,11 @@ post '/members/:id' do
     redirect to "/members/#{params['id']}"
 end
 #####
+
+#method for deleting a member
+post '/members/:id/delete' do
+    member = Member.find_by_id(params['id'])
+    member.delete()
+    redirect to '/members'
+end
+#####
