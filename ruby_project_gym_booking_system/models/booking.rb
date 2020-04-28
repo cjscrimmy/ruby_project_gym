@@ -59,6 +59,16 @@ class Booking
         return member
     end
 
+    def lesson()
+        sql = "SELECT *
+        FROM lessons
+        WHERE lessons.id = $1"
+        values = [@lesson_id]
+        lesson_data = SqlRunner.run(sql, values)
+        lesson = Lesson.map_items(lesson_data).first()
+        return lesson
+    end
+
     def self.delete_all()
         sql = "DELETE FROM bookings"
         SqlRunner.run(sql)
