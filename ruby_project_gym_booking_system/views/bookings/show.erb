@@ -1,0 +1,21 @@
+<h1>Booking <%=@booking.id%> Info</h1>
+
+<h2>Details</h2>
+
+<h3>Member Details</h3>
+<p>Name: <%= @booking.member.pretty_name()%></p>
+
+<h3>Lesson Details</h3>
+<p>Lesson Name: <%= @booking.lesson.lesson_name%></p>
+<p>Lesson Type: <%= @booking.lesson.lesson_type%></p>
+<p>Day of Lesson: <%= @booking.lesson.day_of_lesson%></p>
+<p>Time of Lesson: <%= @booking.lesson.time_lesson_is_on%></p>
+<p>Week Number of Lesson: <%= @booking.lesson.week_number_lesson_is_on%>
+
+<p><a href="/bookings/<%=@booking.id%>/edit">Edit Booking</a>
+
+<p>
+    <form method="POST" action="/bookings/<%=@booking.id%>/delete">
+        <input type="submit" value="Delete Booking"/>
+    </form>
+</p>
