@@ -10,8 +10,8 @@
             <p>Lesson Name: <%= lesson.lesson_name %></p>
             <p>Lesson Type: <%= lesson.lesson_type %></p>
             <p>Day of Lesson: <%= lesson.day_of_lesson%><p>
-            <p>Time of the Lesson: <%= lesson.time_lesson_is_on%></p>
-            <p>Week number of Lesson: <%= lesson.week_number_lesson_is_on%></p>
+            <p>Time of Lesson: <%= lesson.time_lesson_is_on%></p>
+            <p>Week Number of Lesson: <%= lesson.week_number_lesson_is_on%></p>
         </li>
     <% end %>
 </ul>
@@ -20,7 +20,7 @@
 
 <p>
     <form method="POST" action="/members/<%=@member.id%>/delete">
-        <input type="submit" value="Delete"/>
+        <input type="submit" value="Delete Member"/>
     </form>
 </p>
      

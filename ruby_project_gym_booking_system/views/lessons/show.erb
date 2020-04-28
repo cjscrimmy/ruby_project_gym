@@ -1,0 +1,25 @@
+<h1><%=@lesson.lesson_name%>'s Info </h1>
+
+<h3> Details</h3>
+<p>Lesson Type: <%=@lesson.lesson_type %></p>
+<p>Day of Lesson:<%=@lesson.day_of_lesson %></p>
+<p>Time of Lesson:<%=@lesson.time_lesson_is_on %></p>
+<p>Week Number of Lesson:<%=@lesson.week_number_lesson_is_on%></p>
+
+<h3>Members Taking the Lesson</h3>
+<ul>
+    <% @lesson.members.each do |member| %>
+        <li>
+            <p>Name: <%= member.pretty_name%></p>
+            <p>Date of Birth: <%= member.date_of_birth%></p>
+        </li>
+    <% end %>
+</ul>
+
+<p><a href="/lessons/<%=@lesson.id%>/edit">Edit Lesson Details</a></p>
+
+<p>
+    <form method="POST" action="/lessons/<%=@lesson.id%>/delete">
+        <input type="submit" value="Delete Lesson"/>
+    </form>
+</p>

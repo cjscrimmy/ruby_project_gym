@@ -1,0 +1,10 @@
+<h1>Lessons </h1>
+
+<% for lesson in @lessons %>
+    <p>Lesson Name: <a href="/lessons/<%= lesson.id %>"><%= lesson.lesson_name%></a></p>
+    <p>Lesson Type: <%= lesson.lesson_type %> </p>
+    <p>Day of Lesson: <%= lesson.day_of_lesson%> </p>
+    <p>Time of Lesson: <%= lesson.time_lesson_is_on%></p>
+    <p>Week Number of Lesson <%=lesson.week_number_lesson_is_on%></p>
+    <hr />
+<% end %>
