@@ -37,3 +37,11 @@ get "/lessons/:id" do #show
     @lesson = Lesson.find_by_id(params['id'].to_i)
     erb(:"lessons/show")
 end
+
+#method for deleting a lesson
+post "/lessons/:id/delete" do
+    lesson = Lesson.find_by_id(params['id'].to_i)
+    lesson.delete()
+    redirect to "/lessons"
+end
+#####

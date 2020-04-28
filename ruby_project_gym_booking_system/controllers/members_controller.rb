@@ -40,7 +40,7 @@ end
 
 #method for deleting a member
 post '/members/:id/delete' do
-    member = Member.find_by_id(params['id'])
+    member = Member.find_by_id(params['id'].to_i)
     member.delete()
     redirect to '/members'
 end
