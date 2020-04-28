@@ -58,6 +58,17 @@ class Lesson
         values = [@id]
         SqlRunner.run(sql, values)
     end
+
+    def members()
+        sql = "SELECT members.*
+        FROM members
+        INNER JOIN bookings
+        ON bookings.member_id = members.id
+        WHERE bookings.lesson_id = $1"
+        values = [@id]
+        member_data = SqlRunner.run(sql, values)
+        return Member.map_items(member_data)
+    end
     
     def self.delete_all()
         sql = "DELETE FROM lessons"
