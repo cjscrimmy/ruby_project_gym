@@ -49,6 +49,16 @@ class Booking
         SqlRunner.run(sql, values)
     end
 
+    def member()
+        sql = "SELECT *
+        FROM members
+        WHERE members.id = $1"
+        values = [@member_id]
+        member_data = SqlRunner.run(sql, values)
+        member = Member.map_items(member_data).first()
+        return member
+    end
+
     def self.delete_all()
         sql = "DELETE FROM bookings"
         SqlRunner.run(sql)
