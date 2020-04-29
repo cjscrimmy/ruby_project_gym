@@ -3,5 +3,5 @@
 <% for member in @members %>
     <p>Name: <a href="/members/<%= member.id %>"><%= member.pretty_name()%></a></p>
     <p>Date of birth: <%=member.date_of_birth%></p>
-    <hr />
+    <hr class="dotted_line"/>
 <%end%>

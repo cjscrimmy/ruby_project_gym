@@ -7,20 +7,21 @@
     <title>Simple Gym Booking System</title>
 </head>
 <body>
-    <main>
         <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/members">Members</a></li>
-                <li><a href="/members/new">Add a New Member</a>
-                <li><a href="/lessons">Lessons</a></li>
-                <li><a href="/lessons/new">Add a New Lesson</a></li>
-                <li><a href="/bookings">Bookings</a></li>
-                <li><a href="/bookings/new">Add a New Booking</a></li>
-            </ul>
+            <div class="topnav">
+    
+                    <a class="active" href="/">Home</a>
+                    <a href="/members">Members</a>
+                    <a href="/members/new">Add New Member</a>
+                    <a href="/lessons">Lessons</a>
+                    <a href="/lessons/new">Add New Lesson</a>
+                    <a href="/bookings">Bookings</a>
+                    <a href="/bookings/new">Add New Booking</a>
+                
+            </div>
         </nav>
 
-    </main>
     <%= yield %> 
 </body>
+
 </html>
