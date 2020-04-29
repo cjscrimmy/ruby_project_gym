@@ -42,3 +42,11 @@ post '/bookings/:id' do
 end
 
 #####
+
+#method for deleting a booking
+post '/bookings/:id/delete' do
+    booking = Booking.find_by_id(params['id'].to_i)
+    booking.delete()
+    redirect to '/bookings'
+end
+#####
