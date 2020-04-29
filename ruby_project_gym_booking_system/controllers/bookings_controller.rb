@@ -26,3 +26,19 @@ get '/bookings/:id' do #show
     @booking = Booking.find_by_id(params['id'].to_i)
     erb(:"bookings/show")
 end
+
+#methods for updating booking
+get '/bookings/:id/edit' do
+    @booking = Booking.find_by_id(params['id'].to_i)
+    @lessons = Lesson.all()
+    @members = Member.all()
+    erb(:"bookings/edit")
+end
+
+post '/bookings/:id' do
+    booking = Booking.new(params)
+    booking.update()
+    redirect to "/bookings/#{params['id']}"
+end
+
+#####
