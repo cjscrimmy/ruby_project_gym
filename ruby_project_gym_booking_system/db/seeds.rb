@@ -2,7 +2,7 @@ require_relative("../models/member")
 require_relative("../models/lesson")
 require_relative("../models/booking")
 
-require("pry")
+#require("pry")
 
 Booking.delete_all
 Member.delete_all()
