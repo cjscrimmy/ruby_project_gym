@@ -28,16 +28,16 @@
         </li>
         <li>Open up a termal window</li>
         <li>
-            Type <block>createdb gym_project</block> in the terminal to create you database
+            Type <code>createdb gym_project</code> in the terminal to create you database
         </li>
         <li>
-            Next, use the command <block>cd your_file_path/ruby_project_gym_booking_system/db</block> to access the db (database) folder
+            Next, use the command <code>cd your_file_path/ruby_project_gym_booking_system/db</code> to access the db (database) folder
         </li>
         <li>
-            Once your are in the db folder, type <block>psql -d gym_project -f gym.sql</block> to set-up the table for you database
+            Once your are in the db folder, type <code>psql -d gym_project -f gym.sql</code> to set-up the table for you database
         </li>
         <li>
-            <i>(optional step)</i> If you want to see the database (put intial data into the database), type <block>ruby seeds.rb</block> into the termal
+            <i>(optional step)</i> If you want to see the database (put intial data into the database), type <code>ruby seeds.rb</code> into the termal
         </li>
     </ol>
 </p>
@@ -48,17 +48,17 @@
     <ol>
         <li>Open up a termal window</li>
         <li>
-            Type <block>cd your_file_path/ruby_project_gym_booking_system</block> to navigate to the system's main folder
+            Type <code>cd your_file_path/ruby_project_gym_booking_system</code> to navigate to the system's main folder
         </li>
         <li>
-            Next, type <block>ruby app.rb</block> to start up sinatra 
+            Next, type <code>ruby app.rb</code> to start up sinatra 
         </li>
         <li>
-            <block>Sinatra (v2.0.8.1) has taken the stage on 4567</block>
-            Should now be one of the lines on your terminal. <block>(v2.0.8.1)</block> is the version of sinatra you are using (yours may differ). <block>4567</block> is the port sinatra is running on (yours may differ).
+            <code>Sinatra (v2.0.8.1) has taken the stage on 4567</code>
+            Should now be one of the lines on your terminal. <code>(v2.0.8.1)</code> is the version of sinatra you are using (yours may differ). <code>4567</code> is the port sinatra is running on (yours may differ).
         </li>
         <li>
-            Open up a web browser and type <block>localhost:(your port number)</block> to go to the home page of the app.
+            Open up a web browser and type <code>localhost:(your port number)</code> to go to the home page of the app.
         </li>
     </ol>
 </p>
